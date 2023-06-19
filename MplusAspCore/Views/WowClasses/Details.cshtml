@@ -1,0 +1,30 @@
+﻿@model MplusAspCore.Models.WowClass
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>WowClass</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.className)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.className)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.classDescription)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.classDescription)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
